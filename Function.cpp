@@ -52,16 +52,16 @@ vector<pair<size_t, size_t>> matches;
 int main()
 {
 
-std::vector<Jobs> jobs;
-std::vector<Applicant> applicants;
-std::vector<Results> results;
+  std::vector<Jobs> jobs;
+  std::vector<Applicant> applicants;
+  std::vector<Results> results;
 
-for (const auto& job : jobs) {
-  for (const auto& applicant : applicants) {
-    auto score = calculate_match(applicant, job);
-    // store result in results
-   results.emplace_back(Result{applicant.id, job.id, score});
+  for (const auto& job : jobs) {
+    for (const auto& applicant : applicants) {
+      auto score = calculate_match(applicant, job);
+        // store result in results
+    results.emplace_back(Result{applicant.id, job.id, score});
+    }
   }
-}
 }
 
